@@ -10,6 +10,7 @@
 # Ignore all logfiles and tempfiles.
 log/*
 tmp/*
+.DS_Store
 
 /node_modules
 /yarn-error.log

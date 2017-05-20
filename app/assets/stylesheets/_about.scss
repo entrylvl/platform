@@ -85,7 +85,9 @@
     max-height: 200px;
     max-width: 200px;
     border-radius: 50%;
-    background: blue;
+    background-color: #eee;
+    background-size: cover;
+    background-position: center;
   }
 
   &__author__name {

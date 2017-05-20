@@ -20,15 +20,15 @@
         left: 0;
         opacity: .6;
     }
-  }
 
-  &__header__title {
-    color: #fafafa;
-    margin: auto;
-    max-width: 90%;
-    font-size: 2rem;
-    font-style: italic;
-    letter-spacing: .13rem;
+    &__title {
+      color: #fafafa;
+      margin: auto;
+      max-width: 90%;
+      font-size: 2rem;
+      font-style: italic;
+      letter-spacing: .13rem;
+    }
   }
 
   &__tile {
@@ -36,91 +36,93 @@
     color: #fafafa;
     display: flex;
     min-height: 40vh;
-  }
 
-  &__tile__text {
-    width: 85%;
-    max-width: 500px;
-    margin: auto;
-    font-size: 1rem;
-    line-height: 1.2rem;
+    &__text {
+      width: 85%;
+      max-width: 500px;
+      margin: auto;
+      font-size: 1rem;
+      line-height: 1.2rem;
+    }
   }
 
   &__authors {
     margin-bottom: 2rem;
-  }
 
-  &__authors__title {
-    margin: 2rem auto;
-    text-align: center;
-    font-size: 1.75rem;
-  }
-
-  &__authors__list {
-    width: 90%;
-    max-width: 600px;
-    margin: auto;
-    list-style: none;
-  }
-
-  &__authors__author-card {
-    background: #fafafa;
-    box-shadow: 1px 1px 10px rgba(0,0,0,.15);
-  }
-
-  &__author__header {
-    display: flex;
-    align-items: center;
-    padding: 1rem;
-    background: linear-gradient(to right bottom, #fafafa, #eaeaea);
-  }
-
-  &__author__body {
-    padding: 1rem;
-  }
-
-  &__author__avatar {
-    height: 25vmin;
-    width: 25vmin;
-    max-height: 200px;
-    max-width: 200px;
-    border-radius: 50%;
-    background-color: #eee;
-    background-size: cover;
-    background-position: center;
-  }
-
-  &__author__name {
-    margin-left: 1rem;
-    color: #111;
-  }
-
-  &__author__work {
-    text-align: center;
-  }
-
-  &__author__intro {
-    margin-top: 1rem;
-  }
-
-  &__author__links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-top: 1rem;
-  }
-
-  &__author__link {
-    color: #111;
-    text-decoration: none;
-
-    &:hover,
-    &:focus,
-    &:active,
-    &:visited {
-      color: #111;
-      text-decoration: none;
+    &__title {
+      margin: 2rem auto;
+      text-align: center;
+      font-size: 1.75rem;
     }
+
+    &__list {
+      width: 90%;
+      max-width: 600px;
+      margin: auto;
+      list-style: none;
+    }
+
+    &__author {
+      background: #fafafa;
+      box-shadow: 1px 1px 10px rgba(0,0,0,.15);
+
+      &__header {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        background: linear-gradient(to right bottom, #fafafa, #eaeaea);
+        position: relative;
+      }
+
+      &__body {
+        padding: 1rem;
+      }
+
+      &__avatar {
+        height: 25vmin;
+        width: 25vmin;
+        max-height: 200px;
+        max-width: 200px;
+        border-radius: 50%;
+        background-color: #eee;
+        background-size: cover;
+        background-position: center;
+      }
+
+      &__name {
+        margin-left: 1rem;
+        color: #111;
+      }
+
+      &__work {
+        text-align: center;
+      }
+
+      &__intro {
+        margin-top: 1rem;
+      }
+
+      &__links {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 1rem;
+      }
+
+      &__link {
+        color: #111;
+        text-decoration: none;
+
+        &:hover,
+        &:focus,
+        &:active,
+        &:visited {
+          color: #111;
+          text-decoration: none;
+        }
+      }
+    }
+
   }
 }

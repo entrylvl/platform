@@ -1,5 +1,6 @@
-class PostsController < ApplicationController
+class Dashboard::PostsController < ApplicationController
   before_action :set_post, only:[:show, :update, :destroy, :edit]
+  before_action :authenticate_dashboard_user!
 
   def index
     @posts = Post.all
@@ -48,5 +49,4 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit([:title, :slug, :body, :lead, :status])
   end
-
 end

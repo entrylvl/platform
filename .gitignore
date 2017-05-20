@@ -17,3 +17,6 @@ logfile
 /yarn-error.log
 
 .byebug_history
+
+public/user/*
+public/uploads/*

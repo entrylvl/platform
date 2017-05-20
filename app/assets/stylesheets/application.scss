@@ -1,7 +1,10 @@
 @import "normalize-css";
 
+@import "base/fonts";
 @import "base/variables";
 @import "base/general";
 @import "base/media-queries";
+
+@import "nav";
 
 @import "home";

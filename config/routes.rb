@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
-  devise_for :users
-
   root to: "home#index"
-  
-  resources :posts
+
+  namespace :dashboard do
+    devise_for :users, path: ''
+
+    resources :posts
+
+    root 'panel#index'
+
+    get '/picture', to: 'panel#picture'
+    post '/picture', to: 'panel#save_picture'
+  end
 end

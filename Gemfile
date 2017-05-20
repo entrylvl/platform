@@ -13,7 +13,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'turbolinks', '~> 5'
 gem 'devise', '~> 4.3.0'
 gem 'friendly_id', '~> 5.1.0'
-gem 'shrine'
+gem 'carrierwave'
 gem 'rails-assets-normalize-css', source: 'https://rails-assets.org'
 
 group :development, :test do

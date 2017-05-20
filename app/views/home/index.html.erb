@@ -5,7 +5,9 @@
     <h1 class="home__title">Uma escada para o futuro</h1>
   </header>
   <main class="home__main">
-    <%= render "card" %>
+    <% @posts.each do |post| %>
+      <%= render "card", post: post %>
+    <% end %>
   </main>
 </div>
 

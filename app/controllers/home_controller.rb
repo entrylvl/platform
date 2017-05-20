@@ -3,6 +3,7 @@ class HomeController < ApplicationController
   end
 
   def index
+    @posts = Post.published
   end
 
   def slug

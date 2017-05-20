@@ -1,15 +1,9 @@
 
 <div class="home">
-  <nav class="home__nav">
-    <a href="/home"><%=image_tag("logo.png", alt: "entry lvl", class: "home__logo")%></a>
-    <ul class="home__links">
-      <li><a href="/tags">tags</a></li>
-      <li><a href="/about">sobre</a></li>
-      <li><a href="/jobs">jobs</a></li>
-    </ul>
-  </nav>
+  <%= render "shared/nav" %>
+
   <header class="home__header">
-    <h1 class="home__title">uma frase aqui</h1>
+    <h1 class="home__title">Uma escada para o futuro</h1>
   </header>
   <main>
     <article>

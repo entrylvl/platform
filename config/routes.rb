@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   root to: "home#index"
 
+  get '/about', to: 'home#about'
   get '/:slug', to: 'home#slug'
+
+  resources :posts
   
   namespace :dashboard do
     devise_for :users, path: ''

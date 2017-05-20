@@ -52,19 +52,15 @@
     width: 90%;
     margin: 1rem auto;
     background-color: #fafafa;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, .15);
-
-    @include media('extra-small') {
-      width: 40vw;
-    }
+    box-shadow: 1px 1px 10px rgba(0,0,0,.15);
 
     @include media('small') {
-      width: 50vw;
+      width: 40vw;
       max-width: 500px;
     }
 
     &:hover {
-      box-shadow: 1px 1px 10px rgba(0, 0, 0, .25);
+      box-shadow: 1px 1px 10px rgba(0,0,0,.25);
     }
 
     &__link {

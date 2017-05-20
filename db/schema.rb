@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170520025818) do
+ActiveRecord::Schema.define(version: 20170520041012) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,16 +27,8 @@ ActiveRecord::Schema.define(version: 20170520025818) do
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
   end
 
-  create_table "posts", force: :cascade do |t|
-    t.string "title"
-    t.text "body"
-    t.string "slug"
-    t.string "lead"
-    t.datetime "published_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["slug"], name: "index_posts_on_slug", unique: true
-  end
+# Could not dump table "posts" because of following StandardError
+#   Unknown type 'post_status' for column 'status'
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

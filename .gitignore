@@ -11,6 +11,7 @@
 log/*
 tmp/*
 .DS_Store
+logfile
 
 /node_modules
 /yarn-error.log

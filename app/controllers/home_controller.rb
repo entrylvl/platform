@@ -3,11 +3,11 @@ class HomeController < ApplicationController
   end
 
   def index
-    @posts = Post.published
+    @posts = Post.published.order(:published_at).reverse_order
   end
 
-  def slug
-    @post = Post.published.where(slug: params.require(:slug)).first
+  def post
+    @post = Post.published.friendly.find(params.require(:slug))
 
     unless @post
       render :index

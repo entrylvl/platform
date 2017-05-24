@@ -12,6 +12,11 @@ class Post < ApplicationRecord
 
   def publish!
     self.status = :published
+    self.published_at = Time.current
     save
+  end
+
+  def parsed_body(&block)
+    @parsed_body ||= ConvertMarkdownService.new.convert_post(self, &block)
   end
 end

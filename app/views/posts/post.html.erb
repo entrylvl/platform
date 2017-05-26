@@ -17,10 +17,7 @@
     <h2 class="post__body__subtitle">
       <%= @post.lead %>
     </h2>
-    <%= @post.parsed_body do |body| %>
-      <% body.gsub!(Regexp.new('<h2'), '<h2 class=\"post__body__subtitle\"') %>
-      <% body.gsub!(Regexp.new('<p'), '<p class="post__body__text"') %>
-    <% end.html_safe %>
+    <%= @post.body %>
   </section>
 
   <section class="post__footer">

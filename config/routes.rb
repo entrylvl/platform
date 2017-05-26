@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get '/about', to: 'home#about'
 
-  get 'post/:slug', to: 'home#post'
+  get 'post/:slug', to: 'posts#post', as: :post
 
   namespace :dashboard do
     devise_for :users, path: ''

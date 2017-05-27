@@ -9,9 +9,11 @@ class Post < ApplicationRecord
   scope :review, -> { where(status: :review) }
   scope :approved, -> { where(status: :approved) }
   scope :published, -> { where(status: :published) }
+  scope :new_published, -> { where(status: :published).reverse_order }
 
   def publish!
     self.status = :published
+    self.published_at = Time.current
     save
   end
 end

@@ -1,0 +1,32 @@
+<%= render "shared/nav" %>
+
+<article class="post">
+  <header class="post__header">
+    <h1 class="post__title">
+      <%= @post.title %>
+    </h1>
+    <p class="post__subtitle">
+      Descubra o desfecho dessa história
+    </p>
+    <ul class="card__tags">
+      <li class="card__tag">tag a</li>
+      <li class="card__tag">tag b</li>
+    </ul>
+  </header>
+  <section class="post__body">
+    <h2 class="post__body__subtitle">
+      <%= @post.lead %>
+    </h2>
+    <%= @post.body %>
+  </section>
+
+  <section class="post__footer">
+      <div class="post__author__avatar"></div>
+      <div class="post__author_info">
+        <h3 class="post__author__name">Caique Mitsuoka</h3>
+        <p class="post__author__intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+  </section>
+</article>
+
+<%= render "shared/footer" %>

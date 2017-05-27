@@ -18,6 +18,7 @@ gem 'rails-assets-normalize-css', source: 'https://rails-assets.org'
 gem 'redcarpet'
 gem 'coderay'
 gem 'rspec-rails'
+gem 'draper'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

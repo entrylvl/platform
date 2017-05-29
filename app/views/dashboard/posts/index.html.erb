@@ -13,6 +13,9 @@
     <% @posts.each do |post| %>
       <tr>
         <td><%= post.title %></td>
+        <td><%= post.slug %></td>
+        <td><%= post.lead %></td>
+        <td><%= post.status %></td>
         <td><%= post.published_at %></td>
         <td><%= link_to 'edit', edit_dashboard_post_path(post) %></td>
       </tr>

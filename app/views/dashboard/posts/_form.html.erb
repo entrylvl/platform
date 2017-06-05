@@ -1,17 +1,17 @@
-<%= form_with(model: post, local: true) do |form| %>
+<%= form_with(model: [:dashboard, post], local: true) do |form| %>
   <div class="field">
     <%= form.label :title %>
     <%= form.text_field :title, id: :post_title %>
   </div>
 
   <div class="field">
-    <%= form.label :body %>
-    <%= form.text_field :body, id: :post_body %>
+    <%= form.label :lead %>
+    <%= form.text_field :lead, id: :post_lead %>
   </div>
 
   <div class="field">
-    <%= form.label :lead %>
-    <%= form.text_field :lead, id: :post_lead %>
+    <%= form.label :body %>
+    <%= form.text_area :body, id: :post_body %>
   </div>
 
   <div class="actions">

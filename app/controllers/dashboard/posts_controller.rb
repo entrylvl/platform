@@ -1,5 +1,5 @@
 class Dashboard::PostsController < ApplicationController
-  before_action :set_post, only:[:show, :update, :destroy, :edit]
+  before_action :set_post, only: [:show, :update, :destroy, :edit]
   before_action :authenticate_dashboard_user!
 
   def index
@@ -10,7 +10,7 @@ class Dashboard::PostsController < ApplicationController
     @post = Post.new(post_params)
 
     if @post.save
-      redirect_to @post
+      redirect_to dashboard_post_path(@post)
     else
       render :new
     end
@@ -26,7 +26,7 @@ class Dashboard::PostsController < ApplicationController
     @post.slug = nil
 
     if @post.update(post_params)
-      redirect_to @post
+      redirect_to dashboard_post_path(@post)
     else
       render :edit
     end
@@ -47,6 +47,6 @@ class Dashboard::PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit([:title, :slug, :body, :lead, :status])
+    params.require(:post).permit([:title, :body, :lead, :status])
   end
 end

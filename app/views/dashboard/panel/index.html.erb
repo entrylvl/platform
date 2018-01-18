@@ -5,3 +5,5 @@ dashboard
 <%= link_to('Change profile picture', '/dashboard/picture')%>
 
 <%= link_to('Criar post', dashboard_post_path(:new)) %>
+
+<%= link_to('Sair', destroy_dashboard_user_session_path, method: :delete) %>

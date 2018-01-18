@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'post/:slug', to: 'posts#post', as: :post
 
   namespace :dashboard do
-    devise_for :users, path: ''
+    devise_for :users, only: [:sessions], path: ''
 
     resources :posts
 
@@ -14,6 +14,5 @@ Rails.application.routes.draw do
 
     get '/picture', to: 'panel#picture'
     post '/picture', to: 'panel#save_picture'
-
   end
 end

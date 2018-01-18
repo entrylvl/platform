@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>entry lvl</title>
-    
+
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <%= csrf_meta_tags %>
@@ -12,6 +12,10 @@
   </head>
 
   <body>
+    <%= render "shared/nav" %>
+
     <%= yield %>
+
+    <%= render "shared/footer" %>
   </body>
 </html>

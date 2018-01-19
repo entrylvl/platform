@@ -1,9 +1,36 @@
-dashboard
+<div class="panel">
+  <div class="panel-heading">
+    <h2>Dashboard</h2>
+  </div>
 
-<%= link_to('Posts', dashboard_posts_path) %>
+  <div class="panel-body">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        Posts
+      </div>
 
-<%= link_to('Change profile picture', '/dashboard/picture')%>
+      <div class="panel-body">
+        <%= link_to('Meus Posts', dashboard_posts_path, class: 'btn btn-default') %>
 
-<%= link_to('Criar post', dashboard_post_path(:new)) %>
+        <%= link_to('Criar Post', dashboard_post_path(:new), class: 'btn btn-default') %>
+      </div>
+    </div>
 
-<%= link_to('Sair', destroy_dashboard_user_session_path, method: :delete) %>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        Profile
+      </div>
+
+      <div class="panel-body">
+        <%= link_to('Mudar foto do Perfil', '/dashboard/picture', class: 'btn btn-default')%>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-1 col-md-offset-11">
+        <%= link_to('Sair', destroy_dashboard_user_session_path, method: :delete, class: 'btn btn-warning') %>
+      </div>
+    </div>
+  </div>
+</div>

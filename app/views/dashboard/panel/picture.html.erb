@@ -1,8 +1,18 @@
-<%= form_for [:dashboard, @user], url: 'picture', method: :post do |f| %>
-  <%= f.label :image_data %>
-  <%= f.file_field :image_data %>
-
-  <div>
-    <%= f.submit %>
+<div class="panel">
+  <div class="panel-heading">
+    Editar User
   </div>
-<% end %>
+
+  <div class="panel-body">
+    <%= form_for [:dashboard, @user], url: 'picture', method: :post do |f| %>
+      <div class="form-group">
+        <%= f.label :image_data %>
+        <%= f.file_field :image_data %>
+
+        <div class="text-center">
+          <%= f.submit 'Atualizar', class: 'btn btn-primary' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,24 +1,16 @@
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+<div class="panel">
+  <div class="panel-heading">
+    <h2><%= @post.title %></h2>
+    <h3><%= @post.lead %></h3>
+    <h4><%= @post.slug %></h4>
+  </div>
 
-<p>
-  <strong>Body:</strong>
-  <%= @post.body %>
-</p>
+  <div class="panel-body">
+    <p>
+      <strong>Published at:</strong>
+      <%= @post.published_at %>
+    </p>
 
-<p>
-  <strong>Slug:</strong>
-  <%= @post.slug %>
-</p>
-
-<p>
-  <strong>Lead:</strong>
-  <%= @post.lead %>
-</p>
-
-<p>
-  <strong>Published at:</strong>
-  <%= @post.published_at %>
-</p>
+    <%= @post.body.html_safe %>
+  </div>
+</div>

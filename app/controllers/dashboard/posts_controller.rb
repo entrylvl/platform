@@ -1,4 +1,4 @@
-class Dashboard::PostsController < ApplicationController
+class Dashboard::PostsController < Dashboard::BaseController
   before_action :set_post, only: [:show, :update, :destroy, :edit]
   before_action :authenticate_dashboard_user!
 

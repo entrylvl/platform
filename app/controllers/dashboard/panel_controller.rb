@@ -1,4 +1,4 @@
-class Dashboard::PanelController < ApplicationController
+class Dashboard::PanelController < Dashboard::BaseController
   before_action :authenticate_dashboard_user!
   before_action :set_user, only: [:picture, :save_picture]
 

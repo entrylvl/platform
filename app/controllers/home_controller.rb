@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def about
+    @users = User.all
   end
 
   def index

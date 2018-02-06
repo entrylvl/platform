@@ -1,10 +1,26 @@
 <div class="home">
-  <header class="home__header">
-    <h1 class="home__title">Uma escada para o futuro</h1>
-  </header>
   <main class="home__main">
     <% @posts.each do |post| %>
       <%= render "card", post: post %>
     <% end %>
+    <article class="card">
+      <a class="card__link" href="#">
+        <div class="card__header" style="background-image: url('https://images.unsplash.com/photo-1489167287287-0ef0009694a8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=11d55b41594b9fce3892f2b622f7be1d&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb');">
+          <h2 class="card__title">Automatically deploy with Travis CI and Heroku</h2>
+          <ul class="card__tags">
+            <li class="card__tag card__tag--red">rails</li>
+            <li class="card__tag card__tag--green">tutorial</li>
+            <li class="card__tag card__tag--purple">heroku</li>
+          </ul>
+        </div>
+        <div class="card__footer">
+          <div class="card__footer__text">
+            <h3 class="card__footer__author">Caique Mitsuoka</h3>
+            <h4 class="card__footer__date">12 de outubro de 2017</h4>
+          </div>
+          <img class="card__footer__picture" src="https://scontent.fsod2-1.fna.fbcdn.net/v/t1.0-9/16143166_1383044865091863_7983798229624937096_n.jpg?oh=ad55eb81981be23db69d6113e56e405e&oe=5ADD616B" alt="Author picture">
+        </div>
+      </a>
+    </article>
   </main>
 </div>

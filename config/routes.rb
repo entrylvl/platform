@@ -9,10 +9,8 @@ Rails.application.routes.draw do
     devise_for :users, only: [:sessions], path: ''
 
     resources :posts
+    resources :users, only: [:new, :create, :edit, :update]
 
     root 'panel#index'
-
-    get '/picture', to: 'panel#picture'
-    post '/picture', to: 'panel#save_picture'
   end
 end

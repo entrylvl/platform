@@ -1,0 +1,7 @@
+<div class="panel">
+  <div class="panel-heading">
+    Editar Perfil
+  </div>
+
+  <%= render 'form', user: @user, submit_url: dashboard_user_path(@user), method: :patch %>
+</div>

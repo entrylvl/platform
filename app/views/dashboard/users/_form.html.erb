@@ -1,0 +1,51 @@
+<div class="panel-body">
+  <%= form_for [:dashboard, user], url: submit_url, method: method.to_s do |f| %>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <%= f.label :full_name %>
+          <%= f.text_field :full_name, class: 'form-control' %>
+        </div>
+
+        <div class="col-md-6">
+          <%= f.label :quote %>
+          <%= f.text_field :quote, class: 'form-control' %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <%= f.label :description %>
+          <%= f.text_area :description, class: 'form-control' %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <%= f.label :twitter %>
+          <%= f.text_field :twitter, class: 'form-control' %>
+        </div>
+
+        <div class="col-md-3">
+          <%= f.label :github %>
+          <%= f.text_field :github, class: 'form-control' %>
+        </div>
+
+        <div class="col-md-3">
+          <%= f.label :linkedin %>
+          <%= f.text_field :linkedin, class: 'form-control' %>
+        </div>
+
+        <div class="col-md-3">
+          <%= f.label :image_data %>
+          <%= f.file_field :image_data %>
+          <p class="help-block">A foto precisa estar cortada com o rosto centralizado.</p>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <%= f.submit 'Atualizar', class: 'btn btn-primary' %>
+      </div>
+    </div>
+  <% end %>
+</div>

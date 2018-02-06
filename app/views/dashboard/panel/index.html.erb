@@ -22,7 +22,9 @@
       </div>
 
       <div class="panel-body">
-        <%= link_to('Mudar foto do Perfil', '/dashboard/picture', class: 'btn btn-default')%>
+        <%= link_to('Editar Perfil', edit_dashboard_user_path(current_dashboard_user), class: 'btn btn-default')%>
+
+        <%= link_to('Novo Perfil', new_dashboard_user_path, class: 'btn btn-default')%>
       </div>
     </div>
 

@@ -1,6 +1,5 @@
 .nav {
   height: 15vh;
-  background: rgba(0,0,0,.8);
   padding: 2vh 2vw;
   display: flex;
   flex-direction: column;
@@ -9,17 +8,27 @@
   text-align: center;
 
   &__links {
+    font-family: serif;
     list-style: none;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color: #fff;
+    color: #000;
+    min-width: 300px;
+    max-width: 400px;
+    margin: 0 auto;
+
+    li {
+      margin: auto;
+    }
   }
 
   &__link {
     text-decoration: none;
-    color: #fff;
+    color: #000;
     letter-spacing: 1px;
+
+    &--active {
+      text-decoration: underline;
+    }
   }
 
   &__logo {

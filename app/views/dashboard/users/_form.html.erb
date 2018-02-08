@@ -2,16 +2,35 @@
   <%= form_for [:dashboard, user], url: submit_url, method: method.to_s do |f| %>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-4">
           <%= f.label :full_name %>
           <%= f.text_field :full_name, class: 'form-control' %>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-4">
           <%= f.label :quote %>
           <%= f.text_field :quote, class: 'form-control' %>
         </div>
+
+        <div class="col-md-4">
+          <%= f.label :email %>
+          <%= f.text_field :email, class: 'form-control' %>
+        </div>
       </div>
+
+      <% unless user.persisted? %>
+        <div class="row">
+          <div class="col-md-6">
+            <%= f.label :password, "Password" %>
+            <%= f.password_field :password, autocomplete: "off", class: 'form-control'  %>
+          </div>
+
+          <div class="col-md-6">
+            <%= f.label :password_confirmation %>
+            <%= f.password_field :password_confirmation, class: 'form-control' %>
+          </div>
+        </div>
+      <% end %>
 
       <div class="row">
         <div class="col-md-12">
@@ -44,8 +63,32 @@
       </div>
 
       <div class="text-center">
-        <%= f.submit 'Atualizar', class: 'btn btn-primary' %>
+        <%= f.submit 'Atualizar Perfil', class: 'btn btn-primary' %>
       </div>
     </div>
+  <% end %>
+
+  <% if user.persisted? %>
+    <br />
+    <%= form_for [:dashboard, user], url: submit_url, method: method.to_s, html: { class: 'container-fluid' } do |f| %>
+      <div class="row">
+        <div class="col-md-4">
+          <%= f.label :password, "Password" %>
+          <%= f.password_field :password, autocomplete: "off", class: 'form-control'  %>
+          <p class="help-block">No mínimo 6 caracteres.</p>
+        </div>
+
+        <div class="col-md-4">
+          <%= f.label :password_confirmation %>
+          <%= f.password_field :password_confirmation, class: 'form-control' %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="text-center">
+          <%= f.submit 'Atualizar Senha', class: 'btn btn-primary' %>
+        </div>
+      </div>
+    <% end %>
   <% end %>
 </div>

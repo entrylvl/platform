@@ -4,7 +4,7 @@
   background-color: #FAFAFA;
   box-shadow: 1px 1px 10px rgba(0,0,0,.3);
   transition: .3s all linear;
-  font-family: 'Montserrat', sans-serif;
+  font-family: $default-font-family;
 
   @include media('small') {
     width: 40vw;

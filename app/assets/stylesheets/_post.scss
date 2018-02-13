@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700');
-
 .post {
-  font-family: 'Montserrat', sans-serif;
+  font-family: $default-font-family;
   background-color: #fafafa;
 
   &__header {

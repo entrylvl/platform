@@ -33,6 +33,7 @@
       font-size: 2rem;
       margin: auto auto 0 auto;
       width: 100%;
+      max-width: 900px;
     }
 
     &__taglist {
@@ -44,9 +45,10 @@
 
       @include media("small") {
         width: 50%;
+        max-width: 450px;
         flex-flow: row;
         height: 60px;
-        margin: auto auto 2rem auto;
+        margin: auto 0 2rem auto;
       }
     }
 
@@ -58,6 +60,10 @@
       color: #111;
       border-radius: 1.2rem;
       height: 1.6rem;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
     }
 
     &__info {
@@ -69,7 +75,8 @@
 
       @include media("small") {
         width: 50%;
-        margin: auto auto 2rem auto;
+        max-width: 450px;
+        margin: auto auto 2rem 0;
       }
 
       &__text {

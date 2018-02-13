@@ -1,13 +1,14 @@
 .post {
-  font-family: $default-font-family;
-  background-color: #fafafa;
+  $content-max-width: 900px;
+  font-family: $font-family;
+  background-color: $color-ice;
 
   &__header {
     padding-left: 5%;
     padding-right: 5%;
     position: relative;
     min-height: 40vh;
-    color: #fff;
+    color: $color-white;
     background-image: image_url("header-bg.jpg");
     background-position: center;
     background-size: cover;
@@ -31,7 +32,7 @@
       font-size: 2rem;
       margin: auto auto 0 auto;
       width: 100%;
-      max-width: 900px;
+      max-width: $content-max-width;
     }
 
     &__taglist {
@@ -54,8 +55,8 @@
       margin: auto .5rem;
       font-size: .8rem;
       padding: .3rem .8rem;
-      background: #555;
-      color: #111;
+      background: $color-black;
+      color: $color-white;
       border-radius: 1.2rem;
       height: 1.6rem;
 
@@ -107,7 +108,7 @@
   &__body {
     margin: auto;
     width: 90%;
-    max-width: 900px;
+    max-width: $content-max-width;
 
     img {
       max-width: 100%;
@@ -124,7 +125,7 @@
 
     li {
       font-weight: 300;
-      color: #333;
+      color: $color-black;
       font-size: 1.15rem;
 
       &:not(:last-of-type) {
@@ -138,7 +139,7 @@
     h3,
     h4 {
       font-weight: bold;
-      color: #333;
+      color: $color-black;
       margin-top: 3rem;
       margin-bottom: 1.5rem;
     }
@@ -157,13 +158,13 @@
       line-height: 1.7rem;
       margin-bottom: 1.5rem;
       margin-top: 1.5rem;
-      color: #333;
+      color: $color-black;
       font-weight: 300;
     }
 
     code {
       position: relative;
-      color: #fafafa;
+      color: $color-ice;
       display: block;
       background: #333;
       padding: 1rem;
@@ -173,13 +174,13 @@
   }
 
   &__footer {
-    background: #FFF;
+    background: $color-white;
     box-shadow: 1px 1px 10px rgba(0,0,0,.15);
     margin-top: 2rem;
     padding: 2rem 5%;
 
     &__wrapper {
-      max-width: 900px;
+      max-width: $content-max-width;
       margin: auto;
       display: flex;
       flex-direction: row;
@@ -194,7 +195,7 @@
           transform: translateY(-50%);
           font-size: 5rem;
           opacity: .1;
-          color: #333;
+          color: $color-black;
         }
       }
     }
@@ -221,7 +222,7 @@
     }
 
     &__name {
-      color: #111;
+      color: $color-black;
       font-size: .9rem;
       margin-bottom: .9rem;
       font-weight: 400;

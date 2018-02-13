@@ -13,7 +13,7 @@
         content: '';
         width: 100%;
         height: 100%;
-        background: #111;
+        background: rgba(0,0,0,.6);
         z-index: -1;
         position: absolute;
         top: 0;
@@ -22,7 +22,7 @@
     }
 
     &__title {
-      color: #fafafa;
+      color: $color-ice;
       margin: auto;
       max-width: 90%;
       font-size: 2rem;
@@ -32,8 +32,8 @@
   }
 
   &__tile {
-    background-color: #111;
-    color: #fafafa;
+    background-color: $color-black;
+    color: $color-ice;
     display: flex;
     min-height: 40vh;
 
@@ -63,14 +63,14 @@
     }
 
     &__author {
-      background: #fafafa;
+      background: $color-ice;
       box-shadow: 1px 1px 10px rgba(0,0,0,.15);
 
       &__header {
         display: flex;
         align-items: center;
         padding: 1rem;
-        background: linear-gradient(to right bottom, #fafafa, #eaeaea);
+        background: linear-gradient(to right bottom, $color-ice, darken($color-ice, 10%));
         position: relative;
       }
 
@@ -84,14 +84,14 @@
         max-height: 200px;
         max-width: 200px;
         border-radius: 50%;
-        background-color: #eee;
+        background-color: $color-ice;
         background-size: cover;
         background-position: center;
       }
 
       &__name {
         margin-left: 1rem;
-        color: #111;
+        color: $color-black;
       }
 
       &__work {
@@ -112,14 +112,14 @@
 
       &__link {
         font-size: 2rem;
-        color: #111;
+        color: $color-black;
         text-decoration: none;
 
         &:hover,
         &:focus,
         &:active,
         &:visited {
-          color: #111;
+          color: $color-black;
           text-decoration: none;
         }
       }

@@ -11,7 +11,7 @@
     font-family: serif;
     list-style: none;
     display: flex;
-    color: #000;
+    color: $color-black;
     min-width: 300px;
     max-width: 400px;
     margin: 0 auto;
@@ -23,7 +23,7 @@
 
   &__link {
     text-decoration: none;
-    color: #000;
+    color: $color-black;
     letter-spacing: 1px;
 
     &--active {

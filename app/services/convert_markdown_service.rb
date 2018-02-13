@@ -10,6 +10,6 @@ class ConvertMarkdownService
   end
 
   def parser
-    Redcarpet::Markdown.new(CodeRayify.new, fenced_code_blocks: true)
+    Redcarpet::Markdown.new(CodeRayify.new, fenced_code_blocks: false)
   end
 end

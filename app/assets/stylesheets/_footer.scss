@@ -1,8 +1,29 @@
 footer {
-  font-size: .8rem;
+  display: flex;
+  font-size: 1rem;
   text-align: center;
-  text-transform: uppercase;
+  justify-content: space-around;
   background-color: #111;
   color: #fafafa;
-  padding: .5rem 1rem;
+  padding: 1rem 0rem;
+
+  svg {
+    height: 20px;
+  }
+
+  @include media('medium') {
+    justify-content: space-between;
+    svg {
+      height: 30px;
+      position: relative;
+    }
+
+    .footer__logo {
+      left: 50px;
+    }
+
+    .github__logo {
+      right: 50px;
+    }
+  }
 }

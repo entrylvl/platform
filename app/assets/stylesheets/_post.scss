@@ -165,7 +165,7 @@
       position: relative;
       color: $color-ice;
       display: block;
-      background: #333;
+      background-color: $color-black;
       padding: 1rem;
       border-left: 6px solid #f73d9d;
       box-shadow: 1px 1px 10px rgba(0,0,0,.3);
@@ -182,7 +182,6 @@
       max-width: $content-max-width;
       margin: auto;
       display: flex;
-      flex-direction: row;
       position: relative;
 
       @include media("large") {

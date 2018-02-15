@@ -3,7 +3,7 @@
     position: relative;
     min-height: 50vh;
     display: flex;
-    color: #fff;
+    color: $color-white;
     background-image: image_url("header-bg.jpg");
     background-position: center;
     background-size: cover;
@@ -28,6 +28,6 @@
     font-size: 2rem;
     text-align: center;
     letter-spacing: 1px;
-    font-family: $title-font
+    font-family: $font-family;
   }
 }

@@ -1,4 +1,4 @@
-.sharednav {
+.shared-nav {
   height: 15vh;
   padding: 2vh 2vw;
   display: flex;
@@ -48,7 +48,8 @@
     }
 
     &__logo {
-      margin: 0 0 0 30px;
+      margin-bottom: 0px;
+      margin-left: 30px;
     }
   }
 }

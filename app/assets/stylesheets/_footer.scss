@@ -1,29 +1,32 @@
-footer {
-  display: flex;
+.footer {
   font-size: 1rem;
-  text-align: center;
-  justify-content: space-around;
   background-color: #111;
   color: #fafafa;
   padding: 1rem 0rem;
 
-  svg {
-    height: 20px;
-  }
+  .svg {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 
-  @include media('medium') {
-    justify-content: space-between;
-    svg {
-      height: 30px;
-      position: relative;
+    .footer__logo, .footer__github {
+      height: 20px;
     }
 
-    .footer__logo {
-      left: 50px;
-    }
+    @include media('medium') {
+      justify-content: space-between;
+      .footer__logo, .footer__github {
+        height: 30px;
+        position: relative;
+      }
 
-    .github__logo {
-      right: 50px;
+      .footer__logo {
+        left: 50px;
+      }
+
+      .footer__github {
+        right: 50px;
+      }
     }
   }
 }

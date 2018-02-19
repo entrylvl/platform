@@ -17,15 +17,14 @@
       justify-content: space-between;
       .footer__logo, .footer__github {
         height: 30px;
-        position: relative;
       }
 
       .footer__logo {
-        left: 50px;
+        margin-left: 30px;
       }
 
       .footer__github {
-        right: 50px;
+        margin-right: 30px;
       }
     }
   }

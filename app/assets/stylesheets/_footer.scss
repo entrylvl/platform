@@ -1,8 +1,32 @@
-footer {
-  font-size: .8rem;
-  text-align: center;
-  text-transform: uppercase;
-  background-color: $color-black;
-  color: $color-ice;
-  padding: .5rem 1rem;
+.footer {
+  font-size: 1rem;
+  background-color: #111;
+  color: #fafafa;
+  padding: 1rem 0rem;
+
+  .svg {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .footer__logo, .footer__github {
+      height: 20px;
+    }
+
+    @include media('medium') {
+      justify-content: space-between;
+      .footer__logo, .footer__github {
+        height: 30px;
+        position: relative;
+      }
+
+      .footer__logo {
+        left: 50px;
+      }
+
+      .footer__github {
+        right: 50px;
+      }
+    }
+  }
 }

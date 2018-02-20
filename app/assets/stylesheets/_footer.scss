@@ -2,7 +2,7 @@
   font-size: 1rem;
   background-color: #111;
   color: #fafafa;
-  padding: 1rem 0rem;
+  padding: 0.5rem 0rem;
 
   .svg {
     display: flex;
@@ -16,7 +16,7 @@
     @include media('medium') {
       justify-content: space-between;
       .footer__logo, .footer__github {
-        height: 30px;
+        height: 20px;
       }
 
       .footer__logo {

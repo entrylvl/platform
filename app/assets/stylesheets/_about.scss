@@ -64,7 +64,7 @@
 
     &__author {
       background: $color-ice;
-      box-shadow: 1px 1px 10px rgba(0,0,0,.15);
+      @include shadow('light');
 
       &__header {
         display: flex;

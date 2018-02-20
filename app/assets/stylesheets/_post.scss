@@ -161,13 +161,42 @@
       font-weight: 300;
     }
 
+    a {
+      color: $highlight-color;
+      transition: color .2s linear;
+
+      &:visited,
+      &:focus {
+        color: $highlight-color;
+      }
+
+      &:hover {
+        color: invert($highlight-color);
+      }
+    }
+
+    hr {
+      color: transparent;
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 6px;
+        width: 100%;
+        background: linear-gradient(to right, $color-ice, $highlight-color);
+      }
+    }
+
     code {
       position: relative;
       color: $color-ice;
       display: block;
       background-color: $codeblock-background;
       padding: 1rem;
-      border-left: 6px solid $codeblock-border;
+      border-left: 6px solid $highlight-color;
       box-shadow: 1px 1px 10px rgba(0,0,0,.3);
     }
   }

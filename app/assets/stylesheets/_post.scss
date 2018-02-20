@@ -165,9 +165,9 @@
       position: relative;
       color: $color-ice;
       display: block;
-      background-color: $color-black;
+      background-color: $codeblock-background;
       padding: 1rem;
-      border-left: 6px solid #f73d9d;
+      border-left: 6px solid $codeblock-border;
       box-shadow: 1px 1px 10px rgba(0,0,0,.3);
     }
   }

@@ -4,7 +4,11 @@
     <h1 class="about__header__title"><em>wtf</em> is entry lvl?</h1>
   </header>
   <section class="about__tile">
-    <p class="about__tile__text">a gente sabe bem das dificuldades de se ingressar na área de desenvolvimento de software. o entry lvl existe pra mostrar o caminho das pedras pra quem quer iniciar ou está iniciando sua carreira. esperamos te ajudar a conseguir seu primeiro emprego na área, aprender a desenvolver software e também a desenvolver-se como profissional.</p>
+    <div>
+      <p class="about__tile__text">o <a class="link" href="/">entrylvl</a> existe pra mostrar o caminho das pedras pra quem quer iniciar ou está iniciando sua carreira.
+      <p class="about__tile__text">a gente sabe bem das dificuldades de se ingressar na área de desenvolvimento de software.</p>
+      <p class="about__tile__text">queremos te ajudar a conseguir seu primeiro emprego na área, aprender a desenvolver software e também a desenvolver-se como profissional.</p>
+    </div>
   </section>
   <section class="about__authors">
     <h2 class="about__authors__title">Autores</h2>
@@ -13,22 +17,24 @@
         <li class="about__authors__author">
           <div class="about__authors__author__header">
             <div class="about__authors__author__avatar" style="background-image: url('<%= user.image_data.url %>')"></div>
-            <h3 class="about__authors__author__name"><%= user.full_name %></h3>
+            <div>
+              <h3 class="about__authors__author__name"><%= user.full_name %></h3>
+              <h4 class="about__authors__author__work"><%= user.quote %></h4>
+              <ul class="about__authors__author__links">
+                <% if user.github.present? %>
+                  <li><a class="about__authors__author__link" href="<%= user.github %>"><i class="fa fa-github"></i></a></li>
+                <% end %>
+                <% if user.linkedin.present? %>
+                  <li><a class="about__authors__author__link" href="<%= user.linkedin %>"><i class="fa fa-linkedin"></i></a></li>
+                <% end %>
+                <% if user.twitter.present? %>
+                  <li><a class="about__authors__author__link" href="<%= user.twitter %>"><i class="fa fa-twitter"></i></a></li>
+                <% end %>
+              </ul>
+            </div>
           </div>
           <div class="about__authors__author__body">
-            <p class="about__authors__author__work"><%= user.quote %></p>
             <p class="about__authors__author__intro"><%= user.description %></p>
-            <ul class="about__authors__author__links">
-              <% if user.github.present? %>
-                <li><a class="about__authors__author__link" href="<%= user.github %>"><i class="fa fa-github"></i></a></li>
-              <% end %>
-              <% if user.linkedin.present? %>
-                <li><a class="about__authors__author__link" href="<%= user.linkedin %>"><i class="fa fa-linkedin"></i></a></li>
-              <% end %>
-              <% if user.twitter.present? %>
-                <li><a class="about__authors__author__link" href="<%= user.twitter %>"><i class="fa fa-twitter"></i></a></li>
-              <% end %>
-            </ul>
           </div>
         </li>
       <% end %>

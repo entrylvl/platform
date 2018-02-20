@@ -1,0 +1,13 @@
+a.link {
+  color: $highlight-color;
+  transition: color .2s linear;
+
+  &:visited,
+  &:focus {
+    color: $highlight-color;
+  }
+
+  &:hover {
+    color: invert($highlight-color);
+  }
+}

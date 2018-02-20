@@ -89,25 +89,7 @@
 
     &__author {
       background: $color-ice;
-      box-shadow: 1px 1px 10px rgba(0,0,0,.45);
-      max-width: 320px;
-      margin-bottom: 2rem;
-
-      @include media("small") {
-        min-width: 240px;
-        max-width: 40%;
-        margin: 0 auto 2rem auto;
-      }
-
-      @include media("medium") {
-        max-width: 30%;
-        margin: 0 auto 2rem auto;
-      }
-
-      @include media("large") {
-        max-width: 18%;
-        margin: 0 auto 2rem auto;
-      }
+      @include shadow('dark');
 
       &__header {
         display: flex;

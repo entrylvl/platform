@@ -162,16 +162,16 @@
     }
 
     a {
-      color: $codeblock-border;
+      color: $highlight-color;
       transition: color .2s linear;
 
       &:visited,
       &:focus {
-        color: $codeblock-border;
+        color: $highlight-color;
       }
 
       &:hover {
-        color: invert($codeblock-border);
+        color: invert($highlight-color);
       }
     }
 
@@ -186,7 +186,7 @@
         top: 0;
         height: 6px;
         width: 100%;
-        background: linear-gradient(to right, $color-ice, $codeblock-border);
+        background: linear-gradient(to right, $color-ice, $highlight-color);
       }
     }
 
@@ -196,7 +196,7 @@
       display: block;
       background-color: $codeblock-background;
       padding: 1rem;
-      border-left: 6px solid $codeblock-border;
+      border-left: 6px solid $highlight-color;
       box-shadow: 1px 1px 10px rgba(0,0,0,.3);
     }
   }

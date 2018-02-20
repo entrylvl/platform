@@ -2,7 +2,7 @@
   width: 90%;
   margin: 1rem auto;
   background-color: $color-ice;
-  box-shadow: 1px 1px 10px rgba(0,0,0,.3);
+  @include shadow('medium');
   transition: .3s all linear;
   font-family: $font-family;
 
@@ -13,7 +13,7 @@
   }
 
   &:hover {
-    box-shadow: 1px 1px 10px rgba(0,0,0,.6);
+    @include shadow('dark');
   }
 
   &__link {

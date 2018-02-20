@@ -197,13 +197,13 @@
       background-color: $codeblock-background;
       padding: 1rem;
       border-left: 6px solid $highlight-color;
-      box-shadow: 1px 1px 10px rgba(0,0,0,.3);
+      @include shadow('medium');
     }
   }
 
   &__footer {
     background: $color-white;
-    box-shadow: 1px 1px 10px rgba(0,0,0,.15);
+    @include shadow('light');
     margin-top: 2rem;
     padding: 2rem 5%;
 

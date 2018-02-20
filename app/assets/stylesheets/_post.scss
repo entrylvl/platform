@@ -161,6 +161,35 @@
       font-weight: 300;
     }
 
+    a {
+      color: $codeblock-border;
+      transition: color .2s linear;
+
+      &:visited,
+      &:focus {
+        color: $codeblock-border;
+      }
+
+      &:hover {
+        color: invert($codeblock-border);
+      }
+    }
+
+    hr {
+      color: transparent;
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 6px;
+        width: 100%;
+        background: linear-gradient(to right, $color-ice, $codeblock-border);
+      }
+    }
+
     code {
       position: relative;
       color: $color-ice;

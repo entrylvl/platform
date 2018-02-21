@@ -8,4 +8,10 @@ class PostDecorator < ApplicationDecorator
   def body(&block)
     ConvertMarkdownService.new.convert_post(object, &block).html_safe
   end
+
+  def header_image
+    return object.header_image if object.header_image.present?
+
+    '/assets/header-bg.jpg'
+  end
 end

@@ -5,6 +5,13 @@ class Post < ApplicationRecord
 
   friendly_id :title, use: :slugged
 
+  enum status: {
+    draft: 'draft',
+    review: 'review',
+    approved: 'approved',
+    published: 'published'
+  }
+
   scope :draft, -> { where(status: :draft) }
   scope :review, -> { where(status: :review) }
   scope :approved, -> { where(status: :approved) }
@@ -14,6 +21,6 @@ class Post < ApplicationRecord
   def publish!
     self.status = :published
     self.published_at = Time.current
-    save
+    save!
   end
 end

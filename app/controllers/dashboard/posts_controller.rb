@@ -1,5 +1,5 @@
 class Dashboard::PostsController < Dashboard::BaseController
-  before_action :set_post, only: [:show, :update, :destroy, :edit]
+  before_action :set_post, only: [:show, :update, :destroy, :edit, :publish]
 
   def index
     @posts = Post.all
@@ -37,6 +37,12 @@ class Dashboard::PostsController < Dashboard::BaseController
 
   def destroy
     @post.destroy
+  end
+
+  def publish
+    @post.publish!
+
+    redirect_to action: :index
   end
 
   private

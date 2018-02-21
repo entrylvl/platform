@@ -8,7 +8,11 @@ Rails.application.routes.draw do
   namespace :dashboard do
     devise_for :users, only: [:sessions], path: ''
 
-    resources :posts
+    resources :posts do
+      member do
+        post :publish
+      end
+    end
     resources :users, only: [:new, :create, :edit, :update]
 
     root 'panel#index'

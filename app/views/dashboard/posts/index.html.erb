@@ -25,6 +25,9 @@
             <td><%= post.status %></td>
             <td><%= post.published_at %></td>
             <td><%= link_to 'Editar', edit_dashboard_post_path(post) %></td>
+            <% unless post.published? %>
+              <td><%= link_to 'Publicar', publish_dashboard_post_path(post), method: :post %></td>
+            <% end %>
           </tr>
         <% end %>
       </tbody>

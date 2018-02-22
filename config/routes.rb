@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get '/about', to: 'home#about'
 
+  get '/jobs', to: 'home#jobs'
+
   get 'post/:slug', to: 'posts#post', as: :post
 
   namespace :dashboard do

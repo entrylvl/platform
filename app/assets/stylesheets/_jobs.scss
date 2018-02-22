@@ -1,0 +1,253 @@
+.jobs {
+  &__header {
+    min-height: 60vh;
+    display: flex;
+    flex-flow: column;
+    background-color: $color-black;
+
+    @include media("small") {
+      min-height: 40vh;
+    }
+
+    &__title {
+      $from-color: #CD96FE;
+      $to-color: #8082FE;
+
+      text-align: center;
+      margin: auto;
+      background: linear-gradient(to right, adjust-hue($from-color, 100%), adjust-hue($to-color, 100%));
+      -webkit-background-clip: text;
+      color: transparent;
+      position: relative;
+      margin-top: 2rem;
+
+      &:before {
+        content: 'Mural de Vagas';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+
+        background: linear-gradient(to right, adjust-hue($from-color, 180%), adjust-hue($to-color, 180%));
+        -webkit-background-clip: text;
+
+        animation-name: blink;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-delay: 3s;
+      }
+
+      @include media("small") {
+        margin-bottom: 5vh;
+        margin-top: auto;
+        font-size: 5vmin;
+        font-style: italic;
+
+        &:after {
+          content: 'as melhores empresas e oportunidades pro início da sua carreira! 🚀';
+          margin-top: .4rem;
+          font-size: .8rem;
+          font-weight: 300;
+          display: block;
+          background: none;
+          -webkit-background-clip: initial;
+          color: $color-ice;
+        }
+      }
+    }
+
+    &__actions {
+      display: flex;
+      flex-flow: column;
+      margin: auto;
+
+      @include media("small") {
+        flex-flow: row;
+        width: 90%;
+        max-width: 600px;
+        margin-top: 0;
+      }
+    }
+
+    &__action {
+      background-color: $color-ice;
+      color: $color-black;
+      margin: auto;
+      display: inline-block;
+      width: 240px;
+      padding: 1rem .5rem;
+      text-align: center;
+      border-left: 6px solid $highlight-color;
+      text-decoration: none;
+      transition: all .1s linear;
+
+      @include media("small") {
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+
+      &:first-of-type {
+        margin-bottom: 1rem;
+
+        @include media("small") {
+          margin-bottom: 0;
+        }
+      }
+
+      &:hover,
+      &:focus,
+      &:visited {
+        text-decoration: none;
+        color: $color-black;
+      }
+
+      &__call {
+        font-size: 1.1rem;
+        margin-bottom: .4rem;
+      }
+
+      &__detail {
+        font-size: .8rem;
+        font-weight: 300;
+      }
+    }
+  }
+
+  &__body {
+    background-color: $color-black;
+    padding: 5vh 0;
+
+    @include media("small") {
+      min-height: calc(55vh - 1rem - 20px); //minus footer and nav height
+    }
+
+    &__job-list {
+      width: 90%;
+      max-width: 540px;
+      margin: auto;
+      list-style: none;
+    }
+
+    &__job {
+      padding: 2rem 1rem;
+      border-top: .5px solid rgba($color-black, .3);
+      border-bottom: .5px solid rgba($color-black, .3);
+      overflow: visible;
+      background-color: darken($color-ice, 5%);
+      transition: all .1s linear;
+      position: relative;
+
+      @include media("small") {
+        &:hover {
+          transform: scale(1.05);
+          background-color: $color-ice;
+          box-shadow: 0 0 10px rgba(0,0,0,.3);
+          z-index: 2;
+        }
+      }
+
+      &__link {
+        text-decoration: none;
+        color: $color-black;
+        position: relative;
+        display: block;
+
+        &:hover,
+        &:focus,
+        &:visited {
+          text-decoration: none;
+          color: $color-black;
+        }
+
+        @include media("small") {
+          display: flex;
+        }
+      }
+
+        &__company {
+          font-size: 1rem;
+
+          @include media("small") {
+            font-size: 1.2rem;
+          }
+        }
+
+        &__position {
+          margin-top: .2rem;
+          font-size: .8rem;
+          font-weight: 300;
+
+          @include media("small") {
+            font-size: 1rem;
+            margin-top: .4rem;
+          }
+        }
+
+        &__details {
+          margin-top: 1rem;
+          color: $color-black;
+          display: flex;
+          opacity: .7;
+
+          @include media("small") {
+            display: block;
+            margin: auto 0 auto auto;
+            text-align: right;
+          }
+        }
+
+        &__kind {
+          display: inline-block;
+          font-size: .8rem;
+          margin-right: 0;
+          margin-left: auto;
+
+          @include media("small") {
+            display: block;
+            font-size: 1rem;
+          }
+
+          &:after {
+            content: '/';
+            margin-left: .25rem;
+            margin-right: .25rem;
+            font-weight: 300;
+
+            @include media("small") {
+              display: none;
+            }
+          }
+        }
+
+        &__location {
+          display: inline-block;
+          font-size: .8rem;
+          margin-right: 0;
+          font-weight: 300;
+
+          @include media("small") {
+            display: block;
+            font-size: 1rem;
+            margin-top: .4rem;
+          }
+        }
+    }
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

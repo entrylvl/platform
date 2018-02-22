@@ -4,6 +4,6 @@ class HomeController < ApplicationController
   end
 
   def index
-    @posts = Post.new_published.decorate
+    @posts = Post.includes(:author).new_published.decorate
   end
 end

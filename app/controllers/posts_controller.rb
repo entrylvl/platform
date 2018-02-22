@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def post
-    @post = Post.published.friendly.find(slug).decorate
+    @post = Post.includes(:author).published.friendly.find(slug).decorate
   end
 
   private

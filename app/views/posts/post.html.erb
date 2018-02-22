@@ -4,16 +4,13 @@
     <h1 class="post__header__title">
       <%= @post.title %>
     </h1>
-    <ul class="post__header__taglist">
-      <li class="post__header__tag">tag a</li>
-      <li class="post__header__tag">tag b</li>
-    </ul>
+    <ul class="post__header__taglist"></ul>
     <div class="post__header__info">
       <div class="post__header__info__text">
-        <h2 class="post__header__info__author">Caique Mitsuoka</h3>
-        <h3 class="post__header__info__date">12 de outubro de 2017</h4>
+        <h2 class="post__header__info__author"><%= @post.author.full_name %></h3>
+        <h3 class="post__header__info__date"><%= @post.published_at(date_only: true) %></h3>
       </div>
-      <img class="post__header__info__author-picture" src="https://scontent.fsod2-1.fna.fbcdn.net/v/t1.0-9/16143166_1383044865091863_7983798229624937096_n.jpg?oh=ad55eb81981be23db69d6113e56e405e&oe=5ADD616B" alt="Author picture">
+      <%= image_tag(@post.author.image_data, class: 'post__header__info__author-picture', alt: 'Author picture') %>
     </div>
   </header>
   <main class="post__body">
@@ -21,10 +18,10 @@
   </main>
   <section class="post__footer">
     <div class="post__footer__wrapper">
-      <img src="https://scontent.fsod2-1.fna.fbcdn.net/v/t1.0-9/16143166_1383044865091863_7983798229624937096_n.jpg?oh=ad55eb81981be23db69d6113e56e405e&oe=5ADD616B" class="post__author__avatar" alt="Author picture">
+      <%= image_tag(@post.author.image_data, class: 'post__author__avatar', alt: 'Author picture') %>
       <div class="post__author__info">
-        <h3 class="post__author__name">Caique Mitsuoka</h3>
-        <p class="post__author__intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <h3 class="post__author__name"><%= @post.author.full_name %></h3>
+        <p class="post__author__intro"><%= @post.author.quote %></p>
       </div>
     </div>
   </section>

@@ -12,6 +12,8 @@ class Post < ApplicationRecord
     published: 'published'
   }
 
+  belongs_to :author, class_name: 'User'
+
   scope :draft, -> { where(status: :draft) }
   scope :review, -> { where(status: :review) }
   scope :approved, -> { where(status: :approved) }

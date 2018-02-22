@@ -1,8 +1,12 @@
 class PostDecorator < ApplicationDecorator
   delegate_all
 
-  def published_at
-    object.published_at.strftime('%e %b %Y %H:%M')
+  decorates_association :author
+
+  def published_at(options = {})
+    return l(object.published_at, format: '%e %B %Y') if options[:date_only]
+
+    l(object.published_at, format: '%e %b %Y %H:%M')
   end
 
   def body(&block)

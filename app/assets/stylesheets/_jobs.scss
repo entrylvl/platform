@@ -1,6 +1,6 @@
 .jobs {
   &__header {
-    min-height: 50vh;
+    min-height: 60vh;
     display: flex;
     flex-flow: column;
     background-color: $color-black;
@@ -19,6 +19,7 @@
       -webkit-background-clip: text;
       color: transparent;
       position: relative;
+      margin-top: 2rem;
 
       &:before {
         content: 'Mural de Vagas';
@@ -40,6 +41,7 @@
 
       @include media("small") {
         margin-bottom: 5vh;
+        margin-top: auto;
         font-size: 5vmin;
         font-style: italic;
 

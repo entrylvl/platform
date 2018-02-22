@@ -1,18 +1,16 @@
 <article class="card">
-  <a class="card__link" href="<%= post_path(post) %>">
-    <div class="card__header">
+  <%= link_to post_path(post), class: 'card__link' do %>
+    <%= content_tag :div, class: 'card__header', style: "background-image: url(#{post.header_image})" do %>
       <h2 class="card__title"><%= post.title %></h2>
-      <ul class="card__tags">
-        <li class="card__tag">tag a</li>
-        <li class="card__tag">tag b</li>
-      </ul>
-    </div>
+    <% end %>
+
     <div class="card__footer">
       <div class="card__footer__text">
-        <h3 class="card__footer__author">Caique Mitsuoka</h3>
-        <h4 class="card__footer__date">12 de outubro de 2017</h4>
+        <h3 class="card__footer__author"><%= post.author.full_name %></h3>
+        <h4 class="card__footer__date"><%= post.published_at(date_only: true) %></h4>
       </div>
-      <img class="card__footer__picture" src="https://www.udemy.com/staticx/udemy/images/teaching/tools-assortment.png" alt="Author picture">
+
+      <%= image_tag(post.author.image_data, class: 'card__footer__picture', alt: 'Author picture') %>
     </div>
-  </a>
+  <% end %>
 </article>

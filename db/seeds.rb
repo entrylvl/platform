@@ -1,4 +1,4 @@
-User.create(
+user = User.create(
   email: 'test@entrylvl.com',
   password: '123456',
   full_name: 'Test User',
@@ -9,7 +9,10 @@ User.create(
   github: 'github.com/TestUser'
 )
 
+user = User.first if user.invalid?
+
 Post.create(
+  author: user,
   title: 'Title',
   lead: 'Subtitle',
   body: "### topic
@@ -51,6 +54,7 @@ Post.create(
 )
 
 Post.create(
+  author: user,
   title: 'New Framework to save the web development',
   lead: 'Completly new',
   body: "## About Framework

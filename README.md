@@ -21,9 +21,13 @@ You will need Ruby >= 2.4.0 and PostgreSQL >= 9.5.
 ```shell
 $ gem install bundle
 $ bundle install
-$ bundle exec rake db:setup # make sure postgresql is running
+$ bundle exec rake db:create # make sure postgresql is running
+$ bundle exec rake db:migrate
+$ bundle exec rake db:seed
 $ bundle exec rails server
 ```
+
+The `db:setup` utilize `db:schema:load` and since we are using custom types from postgres and ActiveRecord does not support on the schema.rb, the command fail to create the posts table. You need to run all the migrations, and that why we are not using `db:setup`.
 
 Two articles and a user will be created to help through development.
 

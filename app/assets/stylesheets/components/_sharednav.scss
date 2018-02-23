@@ -11,7 +11,7 @@
     font-family: serif;
     list-style: none;
     display: flex;
-    color: #000;
+    color: $color-really-black;
     min-width: 300px;
     max-width: 400px;
     margin: 0 auto;
@@ -23,11 +23,12 @@
 
   &__link {
     text-decoration: none;
-    color: #000;
+    color: $color-black;
     letter-spacing: 1px;
+    transition: color .1s linear;
 
-    &--active {
-      text-decoration: underline;
+    &:hover {
+      color: $highlight-color;
     }
   }
 

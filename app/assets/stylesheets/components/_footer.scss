@@ -1,13 +1,22 @@
 .footer {
   font-size: 1rem;
-  background-color: #111;
-  color: #fafafa;
+  background-color: $color-really-black;
+  color: $color-ice;
   padding: 0.5rem 0rem;
 
   .svg {
     display: flex;
     align-items: center;
     justify-content: space-around;
+
+    a {
+      transform-origin: center;
+      transform: translate3d(0, 0, 0);
+
+      &:hover {
+        animation: shake 0.8s linear both;
+      }
+    }
 
     .footer__logo, .footer__github {
       height: 20px;
@@ -27,5 +36,23 @@
         margin-right: 30px;
       }
     }
+  }
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(1px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(1px, 0, 0);
   }
 }

@@ -24,6 +24,21 @@
         <p class="post__author__intro"><%= @post.author.quote %></p>
       </div>
     </div>
+    <div class="post__footer__comments">
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://entrylvl.io/<%= @post.slug %>';
+          this.page.identifier = '<%= @post.slug %>';
+        };
+        (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://entrylvl.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    </div>
   </section>
 </article>
 <script>hljs.initHighlightingOnLoad();</script>

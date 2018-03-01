@@ -19,6 +19,7 @@ class Dashboard::UsersController < Dashboard::BaseController
 
   def update
     if @user.update user_params
+      bypass_sign_in(@user)
       redirect_to dashboard_root_path
     else
       render :edit
@@ -33,6 +34,6 @@ class Dashboard::UsersController < Dashboard::BaseController
 
   def user_params
     params.require(:user).permit([:image_data, :full_name, :quote, :description,
-      :twitter, :github, :linkedin])
+      :twitter, :github, :linkedin, :password, :password_confirmation, :email])
   end
 end

@@ -3,5 +3,8 @@
     Editar Perfil
   </div>
 
-  <%= render 'form', user: @user, submit_url: dashboard_user_path(@user), method: :patch %>
+  <%= render 'form', user: @user,
+                     submit_url: dashboard_user_path(@user),
+                     method: :patch %>
+  </div>
 </div>

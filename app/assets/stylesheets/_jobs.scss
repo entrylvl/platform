@@ -139,6 +139,7 @@
       background-color: darken($color-ice, 5%);
       transition: all .1s linear;
       position: relative;
+      cursor: pointer;
 
       @include media("small") {
         &:hover {

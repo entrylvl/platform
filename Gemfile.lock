@@ -52,6 +52,7 @@ GEM
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
       mime-types (>= 1.16)
+    coderay (1.1.2)
     concurrent-ruby (1.0.5)
     crass (1.0.3)
     devise (4.4.1)
@@ -76,6 +77,18 @@ GEM
       activesupport (>= 4.2.0)
     i18n (0.9.1)
       concurrent-ruby (~> 1.0)
+    kaminari (1.1.1)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.1.1)
+      kaminari-activerecord (= 1.1.1)
+      kaminari-core (= 1.1.1)
+    kaminari-actionview (1.1.1)
+      actionview
+      kaminari-core (= 1.1.1)
+    kaminari-activerecord (1.1.1)
+      activerecord
+      kaminari-core (= 1.1.1)
+    kaminari-core (1.1.1)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -97,6 +110,9 @@ GEM
       mini_portile2 (~> 2.3.0)
     orm_adapter (0.5.0)
     pg (0.21.0)
+    pry (0.11.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.9.0)
     puma (3.11.0)
     rack (2.0.3)
     rack-test (0.8.2)
@@ -207,8 +223,10 @@ DEPENDENCIES
   devise (~> 4.4.1)
   draper
   friendly_id (~> 5.1.0)
+  kaminari
   listen (>= 3.0.5, < 3.2)
   pg (~> 0.18)
+  pry
   puma (~> 3.7)
   rails (~> 5.1.0)
   rails-assets-normalize-css!

@@ -53,7 +53,7 @@ class Dashboard::PostsController < Dashboard::BaseController
 
   def post_params
     params.require(:post)
-          .permit([:title, :body, :lead, :status])
+          .permit([:title, :body, :lead, :status, :header_image])
           .merge(author: current_dashboard_user)
   end
 end

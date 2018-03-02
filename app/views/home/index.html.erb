@@ -4,5 +4,17 @@
     <% @posts.each do |post| %>
       <%= render "card", post: post %>
     <% end %>
+
+    <div>
+      <% unless @previous_page.zero? %>
+        <%= link_to '<<', root_path(page: @previous_page) %>
+      <% end %>
+      
+      <%= @current_page %>
+
+      <% if @posts.length == @current_per_page %>
+        <%= link_to '>>', root_path(page: @next_page) %>
+      <% end %>
+    </div>
   </main>
 </div>

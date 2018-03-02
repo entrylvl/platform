@@ -1,0 +1,19 @@
+.pagination {
+  width: 100%;
+  text-align: center;
+  margin: 15px 2px 20px;
+  padding: 8px;
+
+  &__link {
+    font-family: serif;
+    text-decoration: none;
+    color: $color-black;
+    letter-spacing: 1px;
+    padding: 10px;
+    transition: color .1s linear;
+
+    &:hover {
+      color: $highlight-color;
+    }
+  }
+}

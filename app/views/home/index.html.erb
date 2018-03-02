@@ -5,15 +5,15 @@
       <%= render "card", post: post %>
     <% end %>
 
-    <div>
+    <div class="pagination">
       <% unless @previous_page.zero? %>
-        <%= link_to '<<', root_path(page: @previous_page) %>
+        <%= link_to '<<', root_path(page: @previous_page), class: 'pagination__link' %>
       <% end %>
-      
+
       <%= @current_page %>
 
       <% if @posts.length == @current_per_page %>
-        <%= link_to '>>', root_path(page: @next_page) %>
+        <%= link_to '>>', root_path(page: @next_page), class: 'pagination__link' %>
       <% end %>
     </div>
   </main>

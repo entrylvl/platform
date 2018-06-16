@@ -5,13 +5,13 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'rails', '~> 5.1.0'
-gem 'pg', '~> 0.18'
+gem 'rails', '~> 5.2'
+gem 'pg', '~> 1.0.0'
 gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'turbolinks', '~> 5'
-gem 'devise', '~> 4.4.1'
+gem 'devise'
 gem 'friendly_id', '~> 5.1.0'
 gem 'rails-assets-normalize-css', source: 'https://rails-assets.org'
 gem 'redcarpet', '~> 3.4.0'

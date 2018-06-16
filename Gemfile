@@ -19,6 +19,7 @@ gem 'rspec-rails'
 gem 'draper'
 gem 'rouge'
 gem 'kaminari'
+gem 'aws-sdk-s3'
 
 group :development, :test do
   gem 'pry'

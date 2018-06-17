@@ -16,7 +16,7 @@
       <% @users.each do |user| %>
         <li class="about__authors__author">
           <div class="about__authors__author__header">
-            <div class="about__authors__author__avatar" style="background-image: url('<%= user.image_data %>')"></div>
+            <div class="about__authors__author__avatar" style="background-image: url('<%= url_for user.image_data %>')"></div>
             <div>
               <h3 class="about__authors__author__name"><%= user.full_name %></h3>
               <h4 class="about__authors__author__work"><%= user.quote %></h4>

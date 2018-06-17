@@ -10,7 +10,7 @@
         <h4 class="card__footer__date"><%= post.published_at(date_only: true) %></h4>
       </div>
 
-      <%= image_tag(post.author.image_data, class: 'card__footer__picture', alt: 'Author picture') %>
+      <%= image_tag(url_for(post.author.image_data), class: 'card__footer__picture', alt: 'Author picture') %>
     </div>
   <% end %>
 </article>

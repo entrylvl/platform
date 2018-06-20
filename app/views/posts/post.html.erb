@@ -10,7 +10,7 @@
         <h2 class="post__header__info__author"><%= @post.author.full_name %></h3>
         <h3 class="post__header__info__date"><%= @post.published_at(date_only: true) %></h3>
       </div>
-      <%= image_tag(@post.author.image_data, class: 'post__header__info__author-picture', alt: 'Author picture') %>
+      <%= image_tag(@post.author.image_data  { |image| url_for(image) }, class: 'post__header__info__author-picture', alt: 'Author picture') %>
     </div>
   </header>
   <main class="post__body">
@@ -18,7 +18,7 @@
   </main>
   <section class="post__footer">
     <div class="post__footer__wrapper">
-      <%= image_tag(@post.author.image_data, class: 'post__author__avatar', alt: 'Author picture') %>
+      <%= image_tag(@post.author.image_data { |image| url_for(image) }, class: 'post__author__avatar', alt: 'Author picture') %>
       <div class="post__author__info">
         <h3 class="post__author__name"><%= @post.author.full_name %></h3>
         <p class="post__author__intro"><%= @post.author.quote %></p>

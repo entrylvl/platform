@@ -19,4 +19,6 @@ logfile
 .byebug_history
 
 public/user/*
-public/uploads/*
+public/assets/*
+
+storage

@@ -1,9 +1,9 @@
 class UserDecorator < ApplicationDecorator
   delegate_all
 
-  def image_data
+  def image_data(&block)
     return '/assets/user_default.svg' unless object.image_data.attached?
 
-    object.image_data
+    yield object.image_data
   end
 end

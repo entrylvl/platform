@@ -24,6 +24,11 @@
             <td><%= post.lead %></td>
             <td><%= post.status %></td>
             <td><%= post.published_at %></td>
+            <% if post.published? %>
+              <td><%= link_to 'Visualizar', post_path(post) %></td>
+            <% else %>
+              <td><%= link_to 'Visualizar', dashboard_post_path(post) %></td>
+            <% end %>
             <td><%= link_to 'Editar', edit_dashboard_post_path(post) %></td>
             <% unless post.published? %>
               <td><%= link_to 'Publicar', publish_dashboard_post_path(post), method: :post %></td>

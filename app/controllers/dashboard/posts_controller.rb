@@ -16,6 +16,7 @@ class Dashboard::PostsController < Dashboard::BaseController
   end
 
   def show
+    @post.published_at = Time.current
   end
 
   def edit

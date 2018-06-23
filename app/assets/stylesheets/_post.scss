@@ -109,6 +109,7 @@
     margin: auto;
     width: 90%;
     max-width: $content-max-width;
+    word-wrap: break-word;
 
     img {
       max-width: 100%;
@@ -154,7 +155,7 @@
 
     p {
       font-size: 1rem;
-      line-height: 1.7rem;
+      line-height: 2rem;
       margin-bottom: 1.5rem;
       margin-top: 1.5rem;
       color: $color-black;
@@ -191,10 +192,14 @@
     }
 
     code {
-      position: relative;
       color: $color-ice;
-      display: block;
       background-color: $codeblock-background;
+      padding: 5px;
+    }
+
+    .highlight code {
+      position: relative;
+      display: block;
       padding: 1rem;
       border-left: 6px solid $highlight-color;
       @include shadow('medium');

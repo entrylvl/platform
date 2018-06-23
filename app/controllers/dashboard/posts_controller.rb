@@ -48,7 +48,7 @@ class Dashboard::PostsController < Dashboard::BaseController
   private
 
   def set_post
-    @post = Post.friendly.find(params[:id])
+    @post = Post.friendly.find(params[:id]).decorate
   end
 
   def post_params

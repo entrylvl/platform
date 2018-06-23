@@ -1,0 +1,13 @@
+<header class="post__header" style="background-image: url(<%= @post.header_image %>)">
+  <h1 class="post__header__title">
+    <%= post.title %>
+  </h1>
+  <ul class="post__header__taglist"></ul>
+  <div class="post__header__info">
+    <div class="post__header__info__text">
+      <h2 class="post__header__info__author"><%= post.author.full_name %></h3>
+      <h3 class="post__header__info__date"><%= post&.published_at(date_only: true) %></h3>
+    </div>
+    <%= image_tag(post.author.image_data  { |image| url_for(image) }, class: 'post__header__info__author-picture', alt: 'Author picture') %>
+  </div>
+</header>

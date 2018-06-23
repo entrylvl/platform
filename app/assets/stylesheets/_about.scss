@@ -84,12 +84,19 @@
 
       @include media("small") {
         flex-flow: row wrap;
+        justify-content: space-around;
       }
     }
 
     &__author {
       background: $color-ice;
+      width: 85vw;
+      margin: 2vw;
       @include shadow('dark');
+
+      @include media("medium") {
+        width: 40vw;
+      }
 
       &__header {
         display: flex;

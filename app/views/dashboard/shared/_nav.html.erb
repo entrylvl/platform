@@ -1,0 +1,8 @@
+<nav class="shared-nav">
+  <a href="/"><img class="shared-nav__logo" alt="Entrylvl logo" src="<%= asset_path 'entrylvl.svg'%>" /></a>
+  <ul class="shared-nav__links">
+    <li><%= link_to 'Dashboard', dashboard_root_path, class: 'shared-nav__link' %></li>
+    <li><%= link_to 'Meus posts', dashboard_posts_path, class: 'shared-nav__link' %></li>
+    <li><%= link_to('Sair', destroy_dashboard_user_session_path, method: :delete, class: 'shared-nav__link') %></li>
+  </ul>
+</nav>

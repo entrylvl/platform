@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get '/jobs', to: 'home#jobs'
 
-  get 'post/:slug', to: 'posts#post', as: :post
+  resources :posts, only: :show, param: :slug,path: 'post'
 
   namespace :dashboard do
     devise_for :users, only: [:sessions], path: ''

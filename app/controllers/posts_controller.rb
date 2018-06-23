@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  def post
+  def show
     @post = Post.includes(:author).published.friendly.find(slug).decorate
   end
 

@@ -16,6 +16,7 @@ Rails.application.routes.draw do
       end
     end
     resources :users, only: [:new, :create, :edit, :update]
+    resources :jobs, except: :destroy
 
     root 'panel#index'
   end

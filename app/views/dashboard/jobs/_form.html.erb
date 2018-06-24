@@ -1,0 +1,45 @@
+<div class="panel-body">
+  <%= form_for [:dashboard, job], url: submit_url, method: method.to_s do |f| %>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4">
+          <%= f.label :company %>
+          <%= f.text_field :company, class: 'form-control' %>
+        </div>
+
+        <div class="col-md-4">
+          <%= f.label :description %>
+          <%= f.text_field :description, class: 'form-control' %>
+        </div>
+
+        <div class="col-md-4">
+          <%= f.label :location %>
+          <%= f.text_field :location, class: 'form-control' %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <%= f.label :kind %>
+          <%= f.text_field :kind, class: 'form-control' %>
+        </div>
+
+        <div class="col-md-4">
+          <%= f.label :status %>
+
+          <%= f.select(:status, options_for_select(Job.statuses.keys), {}, {class: 'form-control'}) %>
+        </div>
+
+        <div class="col-md-4">
+          <%= f.label :link %>
+          <%= f.text_field :link, class: 'form-control' %>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row text-center">
+      <%= f.submit 'Salvar', class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+</div>

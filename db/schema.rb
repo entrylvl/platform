@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 2018_06_23_232035) do
   create_table "jobs", force: :cascade do |t|
     t.string "company", null: false
     t.string "description", null: false
-    t.string "type", null: false
+    t.string "kind", null: false
     t.string "location", null: false
     t.string "link", null: false
     t.integer "status", default: 0, null: false

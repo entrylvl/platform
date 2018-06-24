@@ -1,0 +1,9 @@
+<div class="panel">
+  <div class="panel-heading">
+    Editar Vaga
+  </div>
+
+  <%= render 'form', job: @job,
+                     submit_url: dashboard_job_path(@job),
+                     method: :patch %>
+</div>

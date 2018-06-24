@@ -1,0 +1,9 @@
+<div class="panel">
+  <div class="panel-heading">
+    Nova Vaga
+  </div>
+
+  <%= render 'form', job: @job,
+                     submit_url: dashboard_jobs_path,
+                     method: :post %>
+</div>

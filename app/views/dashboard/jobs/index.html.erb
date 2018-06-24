@@ -1,0 +1,35 @@
+<div class="panel">
+  <div class="panel-heading">
+    <h2>Vagas</h2>
+  </div>
+
+  <div class="panel-body">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Empresa</th>
+          <th>Descrição</th>
+          <th>Tipo</th>
+          <th>Localização</th>
+          <th>Link</th>
+          <th>Status</th>
+          <th colspan="2"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @jobs.each do |job| %>
+          <tr>
+            <td><%= job.company %></td>
+            <td><%= job.description %></td>
+            <td><%= job.kind %></td>
+            <td><%= job.location %></td>
+            <td><%= job.link %></td>
+            <td><%= job.status %></td>
+            <td><%= link_to 'Editar', edit_dashboard_job_path(job) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

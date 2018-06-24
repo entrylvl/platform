@@ -1,0 +1,32 @@
+<%= render "shared/sharednav" %>
+<header class="jobs__header">
+  <h1 class="jobs__header__title">Mural de Vagas</h1>
+  <nav class="jobs__header__actions">
+    <a class="jobs__header__action" href="https://goo.gl/forms/TnZtEfl8vZGVrggS2" target="_blank">
+      <p class="jobs__header__action__call">Anuncie uma Vaga</p>
+      <p class="jobs__header__action__detail">encontre talentos promissores! 👷🏻‍♀‍</p>
+    </a>
+    <a class="jobs__header__action" href="#list">
+      <p class="jobs__header__action__call">Consiga um Emprego</p>
+      <p class="jobs__header__action__detail">olhe abaixo! 💰</p>
+    </a>
+  </nav>
+</header>
+<main class="jobs__body">
+  <ul class="jobs__body__job-list" id="list">
+    <% @jobs.each do |job|%>
+      <li class="jobs__body__job">
+        <%= link_to(job.link, class: 'jobs__body__job__link') do %>
+          <div>
+            <p class="jobs__body__job__company"><%= job.company %></p>
+            <p class="jobs__body__job__position"><%= job.description %></p>
+          </div>
+          <div class="jobs__body__job__details">
+            <p class="jobs__body__job__kind"><%= job.kind %></p>
+            <p class="jobs__body__job__location"><%= job.location %></p>
+          </div>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</main>

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get '/about', to: 'home#about'
 
-  get '/jobs', to: 'home#jobs'
+  get '/jobs', to: 'jobs#index'
 
   resources :posts, only: :show, param: :slug,path: 'post'
 

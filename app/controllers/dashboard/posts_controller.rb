@@ -16,7 +16,8 @@ class Dashboard::PostsController < Dashboard::BaseController
   end
 
   def show
-    @post.published_at = Time.current
+    @post.published_at ||= Time.current
+    @post = @post.decorate
   end
 
   def edit
@@ -49,7 +50,7 @@ class Dashboard::PostsController < Dashboard::BaseController
   private
 
   def set_post
-    @post = Post.friendly.find(params[:id]).decorate
+    @post = Post.friendly.find(params[:id])
   end
 
   def post_params

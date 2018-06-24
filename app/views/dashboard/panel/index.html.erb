@@ -18,13 +18,25 @@
 
     <div class="panel panel-primary">
       <div class="panel-heading">
-        Profile
+        Perfis
       </div>
 
       <div class="panel-body">
         <%= link_to('Editar Perfil', edit_dashboard_user_path(current_dashboard_user), class: 'btn btn-default')%>
 
         <%= link_to('Novo Perfil', new_dashboard_user_path, class: 'btn btn-default')%>
+      </div>
+    </div>
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        Vagas
+      </div>
+
+      <div class="panel-body">
+        <%= link_to('Todas as Vagas', dashboard_jobs_path, class: 'btn btn-default')%>
+
+        <%= link_to('Nova Vaga', new_dashboard_job_path, class: 'btn btn-default')%>
       </div>
     </div>
 

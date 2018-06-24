@@ -27,7 +27,7 @@
         <div class="col-md-4">
           <%= f.label :status %>
 
-          <%= f.select(:status, options_for_select(Job.statuses.keys), {}, {class: 'form-control'}) %>
+          <%= f.select(:status, options_for_select(Job.statuses.keys, f.object.status), {}, {class: 'form-control'}) %>
         </div>
 
         <div class="col-md-4">

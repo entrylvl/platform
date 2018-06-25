@@ -33,7 +33,11 @@ class Dashboard::UsersController < Dashboard::BaseController
   end
 
   def user_params
-    params.require(:user).permit([:image_data, :full_name, :quote, :description,
-      :twitter, :github, :linkedin, :password, :password_confirmation, :email])
+    params.require(:user).permit(
+      [
+        :image_data, :full_name, :quote, :description, :twitter, :github, :show,
+        :linkedin, :password, :password_confirmation, :email
+      ]
+    )
   end
 end

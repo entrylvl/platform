@@ -1,6 +1,5 @@
 class Dashboard::PostsController < Dashboard::BaseController
   before_action :set_post, only: [:show, :update, :destroy, :edit, :publish]
-  layout 'application', only: [:show]
 
   def index
     @posts = Post.all
@@ -19,6 +18,7 @@ class Dashboard::PostsController < Dashboard::BaseController
   def show
     @post.published_at ||= Time.current
     @post = @post.decorate
+    render layout: 'application'
   end
 
   def edit

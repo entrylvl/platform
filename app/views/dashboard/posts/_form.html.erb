@@ -18,14 +18,14 @@
       <div class="field">
         <%= form.label :header_image %>
         <%= form.text_field :header_image, id: :post_header_image, class: 'form-control' %>
-        <p class="help-block">Url completa. Não obrigatório.</p>
+        <p class="help-block">Url completa ou 1ª imagem do post(automático). Não obrigatório.</p>
       </div>
     </div>
 
     <div class="form-group">
       <div class="field">
         <%= form.label :body %>
-        <%= form.text_area :body, id: :post_body, class: 'form-control' %>
+        <%= form.text_area :body, id: :post_body, class: 'form-control', style: 'height: 60vh;' %>
       </div>
     </div>
 

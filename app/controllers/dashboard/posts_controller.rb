@@ -1,5 +1,6 @@
 class Dashboard::PostsController < Dashboard::BaseController
   before_action :set_post, only: [:show, :update, :destroy, :edit, :publish]
+  layout 'application', only: [:show]
 
   def index
     @posts = Post.all

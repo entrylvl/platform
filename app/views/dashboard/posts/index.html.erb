@@ -22,13 +22,15 @@
             <td><%= post.title %></td>
             <td><%= post.slug %></td>
             <td><%= post.lead %></td>
-            <td><%= post.status %></td>
+            <td>
+              <% if post.published? %>
+                <%= link_to 'published', post_path(post) %>
+              <% else %>
+                <%= post.status %>
+              <% end %>
+            </td>
             <td><%= post.published_at %></td>
-            <% if post.published? %>
-              <td><%= link_to 'Visualizar', post_path(post) %></td>
-            <% else %>
-              <td><%= link_to 'Visualizar', dashboard_post_path(post) %></td>
-            <% end %>
+            <td><%= link_to 'Visualizar', dashboard_post_path(post) %></td>
             <td><%= link_to 'Editar', edit_dashboard_post_path(post) %></td>
             <% unless post.published? %>
               <td><%= link_to 'Publicar', publish_dashboard_post_path(post), method: :post %></td>

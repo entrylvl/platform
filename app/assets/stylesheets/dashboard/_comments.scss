@@ -1,0 +1,51 @@
+.comments {
+  display: flex;
+  flex-direction: column;
+  padding: 1vh 5vw;
+  list-style-type: none;
+  background-color: $color-black;
+
+  &__item {
+    width: 100%;
+    margin: 1vh 0;
+    display: flex;
+    flex-direction: row;
+
+    &--none {
+      text-align: center;
+      color: $color-ice;
+      font-size: 2rem;
+      padding: 30px;
+    }
+  }
+
+  &__body {
+    width: 70vh;
+    background-color: $color-ice;
+    margin: inherit;
+    padding: 14px;
+    border-radius: 10px;
+
+    h1 {
+      display: block;
+      margin-top: 0
+    }
+  }
+
+  &__profile {
+    width: 20vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: $color-ice;
+  }
+
+  &__photo {
+    height: 18vh;
+    width: 18vh;
+    padding: 1vh;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+  }
+}

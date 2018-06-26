@@ -1,0 +1,10 @@
+<div class="comments__profile">
+  <%= image_tag(comment.user.image_data { |image| url_for(image) }, class: 'comments__photo', alt: 'Author picture') %>
+  <p>
+    <%= comment.user.full_name %>
+  </p>
+</div>
+
+<div class="post__body comments__body">
+  <%= comment.body %>
+</div>

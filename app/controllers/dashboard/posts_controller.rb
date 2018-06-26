@@ -1,5 +1,5 @@
 class Dashboard::PostsController < Dashboard::BaseController
-  before_action :set_post, only: [:show, :update, :destroy, :edit, :publish]
+  before_action :set_post, only: [:update, :destroy, :edit, :publish]
 
   def index
     @posts = Post.all
@@ -16,8 +16,10 @@ class Dashboard::PostsController < Dashboard::BaseController
   end
 
   def show
-    @post.published_at ||= Time.current
-    @post = @post.decorate
+    @post = Post.includes(review_comments: [:user]).friendly.find(params[:id]).decorate
+    @post.published_at = Time.current unless @post.published?
+    @comments = @post.review_comments.decorate
+
     render layout: 'application'
   end
 

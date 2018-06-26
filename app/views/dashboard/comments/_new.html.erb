@@ -1,0 +1,18 @@
+<div class="comments">
+  <%= form_for([:dashboard, :review, comment], url: dashboard_post_review_comments_path(post),
+                                               html: {class: 'comments__item'}) do |form| %>
+    <div class="comments__profile">
+      <%= image_tag(current_dashboard_user.image_data { |image| url_for(image) }, class: 'comments__photo', alt: 'Author picture') %>
+        <p>
+          <%= current_dashboard_user.full_name %>
+        </p>
+    </div>
+
+    <div class="comments__new">
+      <%= form.text_area :body, class: 'comments__text-area', style: 'height: 60vh;' %>
+
+      <%= form.submit class: 'comments__button' %>
+    </div>
+
+  <% end %>
+</div>

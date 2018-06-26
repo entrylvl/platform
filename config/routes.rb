@@ -14,6 +14,9 @@ Rails.application.routes.draw do
       member do
         post :publish
       end
+      namespace :review do
+        resources :comments, only: [:create]
+      end
     end
     resources :users, only: [:new, :create, :edit, :update]
     resources :jobs, except: :destroy

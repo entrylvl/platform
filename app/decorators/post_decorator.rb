@@ -4,6 +4,7 @@ class PostDecorator < ApplicationDecorator
   decorates_association :author
 
   def published_at(options = {})
+    return Time.current unless object.published_at
     return l(object.published_at, format: '%e %B %Y') if options[:date_only]
 
     l(object.published_at, format: '%e %b %Y %H:%M')

@@ -17,8 +17,8 @@ class Dashboard::PostsController < Dashboard::BaseController
 
   def show
     @post = Post.includes(review_comments: [:user]).friendly.find(params[:id]).decorate
-    @post.published_at = Time.current unless @post.published?
     @comments = @post.review_comments.decorate
+    @new_comment = Review::Comment.new
 
     render layout: 'application'
   end

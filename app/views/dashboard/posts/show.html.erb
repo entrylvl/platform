@@ -7,18 +7,8 @@
 
     <%= render "posts/body", post: @post %>
   </article>
-  <% if @comments.any? %>
-    <ul class="comments">
-      <% @comments.each do |comment| %>
-        <li class="comments__item">
-          <%= render 'dashboard/comments/show', comment: comment %>
-        </li>
-      <% end %>
-    </ul>
-  <% else %>
-    <p class="comments comments__item--none">
-      Cobra review do pessoal :)
-    </p>
-  <% end %>
 
+  <%= render "dashboard/comments/index", comments: @comments %>
+
+  <%= render "dashboard/comments/new", comment: @new_comment, post: @post %>
 </div>

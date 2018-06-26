@@ -24,7 +24,9 @@
     background-color: $color-ice;
     margin: inherit;
     padding: 14px;
-    border-radius: 10px;
+    border-left-color: rgb(120, 255, 0);
+    border-left-style: solid;
+    border-left-width: 6px;
 
     h1 {
       display: block;
@@ -47,5 +49,29 @@
     border-radius: 50%;
     background-size: cover;
     background-position: center;
+  }
+
+  &__new {
+    width: 70vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text-area {
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    color: $color-black;
+    background-color: $color-ice;
+  }
+
+  &__button {
+    margin: 10px 0;
+    border: none;
+    background-color: $color-really-black;
+    color: $color-ice;
+    font-family: $font-family;
+    border-radius: 10px;
+    padding: 15px;
   }
 }

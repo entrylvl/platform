@@ -12,12 +12,9 @@ class Post < ApplicationRecord
     published: 'published'
   }
 
+  has_many :review_comments, class_name: 'Review::Comment'
   belongs_to :author, class_name: 'User'
 
-  scope :draft, -> { where(status: :draft) }
-  scope :review, -> { where(status: :review) }
-  scope :approved, -> { where(status: :approved) }
-  scope :published, -> { where(status: :published) }
   scope :new_published, -> { where(status: :published).reverse_order }
 
   before_create :set_header_image
